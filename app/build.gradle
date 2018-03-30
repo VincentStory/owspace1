@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.app.vincent.owspace"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion  rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,9 +21,33 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:${androidSupportVersion}"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+//    implementation project(':redroid')
+    compile "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    compile "io.reactivex.rxjava2:rxjava:$rxJava2Version"
+    compile "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger2Version"
+    compile("com.github.hotchemi:permissionsdispatcher:${permissionsDispatcherVersion}") {
+        exclude module: "support-v13"
+    }
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${leakcanaryVersion}"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${leakcanaryVersion}"
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:${permissionsDispatcherVersion}"
+    compile "com.github.bumptech.glide:glide:${glideVersion}"
+    api "com.squareup.retrofit2:retrofit:${retrofit2Version}"
+    implementation("com.squareup.retrofit2:adapter-rxjava2:${retrofit2Version}") {
+        exclude(group: 'io.reactivex.rxjava2', module: 'rxjava')
+    }
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2Version"
+    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'com.android.support:multidex:1.0.1'
 }

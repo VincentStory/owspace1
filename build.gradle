@@ -1,4 +1,49 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    javaVersion = JavaVersion.VERSION_1_8
+
+    applicationId = "owspace"
+    compileSdkVersion = 26
+    minSdkVersion = 19
+    targetSdkVersion = 26
+    versionCode = 1
+    versionName = "1.0"
+    abortOnLintError = false
+    checkLintRelease = false
+    useJack = false
+    abortOnLintError = false
+
+    androidSupportVersion = '27.0.2'
+    junitVersion = "4.12"
+    robolectricVersion = '3.4-rc3'
+    constraintLayoutVersion = "1.0.2"
+
+    quickSideBarVersion = '1.0.3'
+    stickyHeaderVersion = '0.4.3'
+
+
+    okHttpVersion = '3.8.1'
+    gsonVersion = "2.8.2"
+    rxJava2Version = '2.1.6'
+    rxAndroidVersion = '2.0.1'
+    retrofit2Version = '2.3.0'
+    dagger2Version = '2.11'
+    butterKnifeVersion = '8.8.1'
+    timberVersion = '4.6.0'
+    frescoVersion = '1.4.0'
+    eventBusVersion = '3.1.1'
+    mockitoVersion = '2.8.47'
+    permissionsDispatcherVersion = '3.0.1'
+    leakcanaryVersion = "1.5.4"
+    glideVersion = '4.5.0'
+    pushVersion = '3.1.1'
+    thirdPushVersion = '3.0.5@aar'
+    PickerViewVersion = '3.2.7'
+    ossVersion = '+'
+
+    espressoVersion = "3.0.1"
+    testRunnerVersion = "1.0.1"
+}
 
 buildscript {
     
