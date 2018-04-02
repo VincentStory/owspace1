@@ -1,3 +1,2 @@
 include ':app'
-include 'redroid'
 include 'libutils'

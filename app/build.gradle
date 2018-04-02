@@ -28,7 +28,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
-//    implementation project(':redroid')
+    implementation project(':libutils')
     compile "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     compile "io.reactivex.rxjava2:rxjava:$rxJava2Version"
     compile "com.jakewharton:butterknife:$butterKnifeVersion"
