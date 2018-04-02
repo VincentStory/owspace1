@@ -1,7 +1,0 @@
-<resources>
-    <dimen name="loadingdialog_size">120dp</dimen>
-
-
-    <dimen name="footer_view_height">50dp</dimen>
-    <dimen name="loading_text_margin">10dp</dimen>
-</resources>

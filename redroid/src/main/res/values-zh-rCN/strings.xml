@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="data_loading">数据加载中&#8230;</string>
-
-    <string name="loading_more">加载数据中&#8230;</string>
-    <string name="no_more_data">没有更多数据啦!</string>
-</resources>
