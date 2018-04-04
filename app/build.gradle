@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -48,6 +52,10 @@ dependencies {
     }
     implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit2Version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2Version"
-    compile 'com.google.dagger:dagger:2.0.2'
+    compile 'com.google.dagger:dagger:2.11'
     compile 'com.android.support:multidex:1.0.1'
+    compile 'com.orhanobut:logger:1.15'
+    implementation "com.squareup.okhttp3:okhttp:${okHttpVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+    api "com.jakewharton.timber:timber:$timberVersion"
 }

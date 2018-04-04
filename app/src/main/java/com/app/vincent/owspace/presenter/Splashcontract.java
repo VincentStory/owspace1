@@ -9,6 +9,6 @@ public interface Splashcontract {
 
     }
     interface Presenter{
-        void getSplash(String devideId);
+        void getSplash(String deviceId);
     }
 }

@@ -47,4 +47,9 @@ public class TimeUtil {
         calendar.add(Calendar.DATE,amount);
         return calendar.getTime();
     }
+
+    public static long getCurrentSeconds(){
+        long ls = System.currentTimeMillis()/1000;
+        return ls;
+    }
 }
