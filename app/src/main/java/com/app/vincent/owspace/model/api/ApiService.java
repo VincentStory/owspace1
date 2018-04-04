@@ -1,6 +1,5 @@
 package com.app.vincent.owspace.model.api;
 
-import android.database.Observable;
 
 import com.app.vincent.owspace.model.entity.DetailEntity;
 import com.app.vincent.owspace.model.entity.Item;
@@ -11,6 +10,7 @@ import java.util.List;
 
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+import rx.Observable;
 
 /**
  * Created by czxyl171151 on 2018/3/29.
@@ -65,5 +65,4 @@ public interface ApiService {
      */
     @GET("index.php")
     Observable<String> getRecommend(@Query("m") String m,@Query("c") String api,@Query("a") String a,@Query("client") String client,@Query("version") String version, @Query("device_id") String deviceId);
-
 }

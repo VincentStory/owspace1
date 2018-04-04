@@ -1,14 +1,16 @@
 package com.app.vincent.owspace.presenter;
 
+
 /**
- * Created by czxyl171151 on 2018/3/29.
+ * Created by Mr.Yangxiufeng
+ * DATE 2016/7/22
+ * owspace
  */
-
-public interface Splashcontract {
-    interface View{
-
-    }
-    interface Presenter{
+public interface SplashContract {
+    interface Presenter {
         void getSplash(String deviceId);
+    }
+    interface View {
+
     }
 }
