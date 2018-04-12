@@ -26,7 +26,7 @@ public class SplashPresenter implements SplashContract.Presenter {
     public SplashPresenter(SplashContract.View view, ApiService apiService) {
         this.view = view;
         this.apiService = apiService;
-        Logger.d("apppp:"+apiService);
+//        Logger.d("apppp:"+apiService);
     }
     @Override
     public void getSplash(String deviceId ) {

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.app.vincent.owspace.di.component.DaggerNetComponent;
 import com.app.vincent.owspace.di.component.NetComponent;
 import com.app.vincent.owspace.di.modules.NetModule;
 
@@ -42,9 +43,9 @@ public class OwspaceApplication extends Application{
         MultiDex.install(this);
     }
     private void initNet(){
-//        netComponent = DaggerNetComponent.builder()
-//                .netModule(new NetModule())
-//                .build();
+        netComponent = DaggerNetComponent.builder()
+                .netModule(new NetModule())
+                .build();
     }
 
 

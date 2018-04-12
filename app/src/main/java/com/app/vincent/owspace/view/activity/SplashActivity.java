@@ -162,9 +162,9 @@ public class SplashActivity  extends BaseActivity implements SplashContract.View
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+//                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+//                startActivity(intent);
+//                finish();
             }
 
             @Override
@@ -187,6 +187,7 @@ public class SplashActivity  extends BaseActivity implements SplashContract.View
                                            String[] permissions, int[] paramArrayOfInt) {
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, paramArrayOfInt, this);
     }
+
 
     @AfterPermissionGranted(PERMISSON_REQUESTCODE)
     private void requestCodePermissions() {
